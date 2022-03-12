@@ -13,20 +13,20 @@ public class VariablesTheme {
         int amountRamMb = 32672;
         System.out.println("Объём оперативной памяти, Mb: " + amountRamMb);
 
-        long SpaceHdB = 16887000000000L;
-        System.out.println("Объём жёсткого диска, b: " + SpaceHdB);
+        long spaceHdB = 16887000000000L;
+        System.out.println("Объём жёсткого диска, b: " + spaceHdB);
 
-        float EthernetControllerSpeed = 2.5F;
-        System.out.println("Скорость Ethernet-контроллера, GbE: " + EthernetControllerSpeed);
+        float ethernetControllerSpeed = 2.5F;
+        System.out.println("Скорость Ethernet-контроллера, GbE: " + ethernetControllerSpeed);
 
-        double SpaceHdMb = SpaceHdB / 1000000;
-        System.out.println("Объём жёсткого диска, Мb: " + SpaceHdMb);
+        double spaceHdMb = spaceHdB / 1000000;
+        System.out.println("Объём жёсткого диска, Мb: " + spaceHdMb);
 
-        char LiteraHd = 67;
-        System.out.println("Буква системного диска: " + LiteraHd);
+        char literaHd = 67;
+        System.out.println("Буква системного диска: " + literaHd);
 
-        boolean SpaceHdMore = SpaceHdMb > amountRamMb; // true
-        System.out.println("Объём жёсткого диска больше объёма оперативной памяти: " + SpaceHdMore);
+        boolean spaceHdMore = spaceHdMb > amountRamMb; // true
+        System.out.println("Объём жёсткого диска больше объёма оперативной памяти: " + spaceHdMore);
 
         //Расчет стоимости товара со скидкой
         
@@ -127,64 +127,23 @@ public class VariablesTheme {
         System.out.println("\nСумма цифр числа 345 = " + ((345 / 100) + ((345 / 10) % 10) + (345 % 10)));
 
         //Вывод на консоль ASCII-арт Дюка
-        
-        System.out.println("\n8. Вывод на консоль ASCII-арт Дюка:\n");
 
-        char space = 32;
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        
-        char slash = 47;        
-        System.out.print(slash);
-        
-        char reverseSlash = 92;        
-        System.out.println(reverseSlash);
-        
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(slash);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.println(reverseSlash);
-        
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(slash);
-        
-        char underscore = 95;        
-        System.out.print(underscore);
-        
-        char openBracket = 40;        
-        System.out.print(openBracket);
-        System.out.print(space);
-        
-        char closingBracket = 41;        
-        System.out.print(closingBracket);
-        System.out.println(reverseSlash);
-        
-        System.out.print(space);
-        System.out.print(slash);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.print(space);
-        System.out.println(reverseSlash);
+        char space, slash, reverseSlash, underscore, openBracket, closingBracket;
 
-        System.out.print(slash);
-        System.out.print(underscore);
-        System.out.print(underscore);
-        System.out.print(underscore);
-        System.out.print(underscore);
-        System.out.print(slash);
-        System.out.print(reverseSlash);
-        System.out.print(underscore);
-        System.out.print(underscore);
-        System.out.println(reverseSlash);
+        space = 32;
+        slash = 47;
+        reverseSlash = 92;
+
+        System.out.println("\n8. Вывод на консоль ASCII-арт Дюка:\n\n" + space + space + space + space + slash + reverseSlash);
+        System.out.println("" + space + space + space + slash + space + space + reverseSlash);
+
+        underscore = 95;        
+        openBracket = 40;
+        closingBracket = 41;
+
+        System.out.println("" + space + space + slash + underscore + openBracket + space + closingBracket + reverseSlash);
+        System.out.println("" + space + slash + space + space + space + space + space + space + reverseSlash);
+        System.out.println("" + slash + underscore + underscore + underscore + underscore + slash + reverseSlash + underscore + underscore + reverseSlash);
 
         //Отображение сотен, десятков, единиц числа
         
@@ -204,6 +163,5 @@ public class VariablesTheme {
         int minut = (sec - hour * 3600) / 60;
         int second = sec - hour * 3600 - minut * 60;
         System.out.println(hour + ":" + minut + ":" + second);
-        
     }
 }
