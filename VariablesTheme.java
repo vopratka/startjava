@@ -128,22 +128,21 @@ public class VariablesTheme {
 
         //Вывод на консоль ASCII-арт Дюка
 
-        char space, slash, reverseSlash, underscore, openBracket, closingBracket;
+        char space, slash, backslash, underscore, openBracket, closingBracket;
 
         space = 32;
         slash = 47;
-        reverseSlash = 92;
-
-        System.out.println("\n8. Вывод на консоль ASCII-арт Дюка:\n\n" + space + space + space + space + slash + reverseSlash);
-        System.out.println("" + space + space + space + slash + space + space + reverseSlash);
-
+        backslash = 92;
         underscore = 95;        
         openBracket = 40;
-        closingBracket = 41;
+        closingBracket = 41;        
 
-        System.out.println("" + space + space + slash + underscore + openBracket + space + closingBracket + reverseSlash);
-        System.out.println("" + space + slash + space + space + space + space + space + space + reverseSlash);
-        System.out.println("" + slash + underscore + underscore + underscore + underscore + slash + reverseSlash + underscore + underscore + reverseSlash);
+        System.out.println("\n8. Вывод на консоль ASCII-арт Дюка:\n");
+        System.out.println("" + space + space + space + space + slash + backslash);
+        System.out.println("" + space + space + space + slash + space + space + backslash);
+        System.out.println("" + space + space + slash + underscore + openBracket + space + closingBracket + backslash);
+        System.out.println("" + space + slash + space + space + space + space + space + space + backslash);
+        System.out.println("" + slash + underscore + underscore + underscore + underscore + slash + backslash + underscore + underscore + backslash);
 
         //Отображение сотен, десятков, единиц числа
         
