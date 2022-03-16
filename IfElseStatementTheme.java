@@ -95,16 +95,18 @@ public class IfElseStatementTheme {
         //6. Определение суммы вклада и начисленных банком %
         System.out.println("\n6. Определение суммы вклада и начисленных банком %\n");
 
-        int bankDeposit = 300000;
+		double bankDeposit = 300000;
+		double percent = 0;
+		if (bankDeposit < 100000) {
+			percent = 0.05;
+		}  else if (bankDeposit > 100000 & bankDeposit < 300000) {
+			percent = 0.07;
+		} else {
+			percent = 0.1;
+		}
 
-        System.out.println("Сумма вклада: " + bankDeposit + "\n");
-        if (bankDeposit < 100000) {
-            System.out.println("5% годовых при вкладе до 100000.\nНачисленный за год % = " + bankDeposit * 0.05 + "\nИтоговая годовая сумма: " + bankDeposit * 1.05);
-        } else if (bankDeposit > 100000 & bankDeposit < 300000) {
-            System.out.println("7% годовых при вкладе от 100000 до 300000.\n Начисленный за год % = " + bankDeposit * 0.07 + "\n Итоговая годовая сумма: " + bankDeposit * 1.07);
-        } else {
-             System.out.println("10% годовых при вкладе от 300000.\n Начисленный за год % = " + bankDeposit * 0.1 + "\n Итоговая годовая сумма: " + bankDeposit * 1.1);
-        }
+		System.out.println("Сумма вклада: " + bankDeposit + "\nНачисленный за год % = " + bankDeposit * percent + "\nИтоговая годовая сумма: " + (bankDeposit + bankDeposit * percent));        
+        
 
         //7. Определение оценки по предметам
         System.out.println("\n7. Определение оценки по предметам\n");
