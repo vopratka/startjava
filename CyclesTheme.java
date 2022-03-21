@@ -91,13 +91,13 @@ public class CyclesTheme
         System.out.println("\n\n5. Проверка количества единиц на четность\n");
 
         int count = 0;
-        int digit = 3141591;
-        int digit1 = digit % 10;
-        while (digit != 0) {
-            if (digit % 10 == 1) {
+        int number1 = 3141591;
+        int number11 = number1 % 10;
+        while (number1 != 0) {
+            if (number1 % 10 == 1) {
                 count++;
             }
-            digit /= 10;
+            number1 /= 10;
         }
         if (count % 2 == 0) {
             System.out.println("Количество единиц = " + count + " - Чётное число\n");
@@ -149,11 +149,17 @@ public class CyclesTheme
 
         //7. Отображение ASCII-символов
         System.out.println("\n7. Отображение ASCII-символов\n");
-                char symbol = 0;
-        for (int i1 = 1; i1 < 2; i1++) {
-            System.out.println("DEC " + " Char");
-            for (int i2 = 0; i2 <= 127; i2++) {
-            System.out.println(i2 + " " + symbol);
+            char symbol = 0;
+        for (int n = 1; n < 2; n++) {
+            System.out.println("DEC " + "Char");
+            for (int m = 0; m <= 127; m++) {
+                if (m < 10) {
+                    System.out.println(m + "   " + symbol);
+                } else if (m < 100) {
+                    System.out.println(m + "  " + symbol);
+                } else {
+                    System.out.println(m + " " + symbol);
+                }
             symbol++;
             }
         }
