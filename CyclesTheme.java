@@ -2,8 +2,9 @@ public class CyclesTheme {
     public static void main(String[] args) {
         //1. Подсчет суммы четных и нечетных чисел
         System.out.println("1. Подсчет суммы четных и нечетных чисел: \n");
-        
-        int i = -10;
+
+		int i;
+        i = -10;
         int sumEvent = 0;
         int sumOdd = 0;
 
@@ -22,14 +23,14 @@ public class CyclesTheme {
         //2. Вывод чисел между max и min
         System.out.println("\n2. Вывод чисел между max и min: \n");
         
-        int number1 = 10;
+        int number1 = 9;
         int number2 = 5;
-        int number3 = -1;
+        int number3 = 0;
         
         int minNumber = number1;
         int maxNumber = number2;
         
-        if (number1 > number2) {
+        if (minNumber > maxNumber) {
             minNumber = number2;
             maxNumber = number1;
         }
@@ -47,13 +48,14 @@ public class CyclesTheme {
         //3. Вывод реверсивного числа и суммы его цифр
         System.out.println("\n3. Вывод реверсивного числа и суммы его цифр\n");
 
-        int num = 1234;
+        int srcNum;
+        srcNum = 1234;
         int digit = 0;
         int sumDigits = 0;
 
-        while (num != 0) {
-            digit = num % 10;
-            num /= 10;
+        while (srcNum != 0) {
+            digit = srcNum % 10;
+            srcNum /= 10;
             sumDigits += digit; 
             System.out.print(digit);
         }
@@ -81,7 +83,7 @@ public class CyclesTheme {
         System.out.println("\n\n5. Проверка количества единиц на четность\n");
 
         int count = 0;
-        int srcNum = 3141591;
+		srcNum = 3141591;
         while (srcNum != 0) {
             if (srcNum % 10 == 1) {
                 count++;
@@ -97,44 +99,41 @@ public class CyclesTheme {
         //6. Отображение фигур в консоли
         System.out.println("6. Отображение фигур в консоли\n");
 
-        char symbol1 = 42;
         for (int j = 0; j < 50; j++) {
             if (j % 10 == 0) {
                 System.out.print("\n");
             } 
-            System.out.print(symbol1);
+            System.out.print("*");
         }
 
         System.out.println("\n");
 
-        char symbol2 = 35;
-        int num1 = 5;
-        int num2 = 5;
-        while (num1 > 0) {
-            while (num2 > 0) {
-                System.out.print(symbol2);
-                num2--;
+        int j;
+        i = 5;
+        j = 5;
+        while (i > 0) {
+            while (j > 0) {
+                System.out.print("#");
+                j--;
             }
-            System.out.println("");
-            num1--;
-            num2 = num1;
+            System.out.println();
+            j = --i;
         }
 
         System.out.println("\n");
 
-        char symbol3 = 36;
-        int num3 = -2;
-        int num4 = 0;
-        System.out.println(symbol3); //Не нашёл другого решения. Прошу помощи.
+        i = -2;
+        j = 0;
+        System.out.println("$");
         do {
             do {
-                num4++;
-                System.out.print(symbol3);
-            } while (num4 < 2);
-            System.out.println("");
-            num3++;
-            num4 = num3;
-        } while (num3 < 2);
+                j++;
+                System.out.print("$");
+            } while (j < 2);
+            System.out.println();
+            i++;
+            j = i;
+        } while (i < 2);
 
         //7. Отображение ASCII-символов
         System.out.println("\n7. Отображение ASCII-символов\n");
@@ -217,14 +216,14 @@ public class CyclesTheme {
         System.out.println("\n10. Вывод таблицы умножения Пифагора\n");
 
         int k = 2;
-        int j = 0;
+        j = 0;
 
         System.out.print("   ");
         while (k < 10) {
             System.out.print(" " + k + " ");
             k++;
         }
-        System.out.println("");
+        System.out.println();
         for (k = 2; k < 10; k++) {
             System.out.print(" " + k + " ");
             for (j = 2; j < 10; j++) {
@@ -234,7 +233,7 @@ public class CyclesTheme {
                     System.out.print(k * j + " ");
                 }
             }
-            System.out.println("");
+            System.out.println();
         }
     }
 }
