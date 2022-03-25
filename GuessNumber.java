@@ -15,6 +15,5 @@ public class GuessNumber{
                 break;
             }
         }
-
     }
 }
