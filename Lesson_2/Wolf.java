@@ -24,18 +24,4 @@ public class Wolf {
     void hunt() {
         System.out.println("Охотится");
     }
-    
-    public static void main(String[] args) {
-        Wolf wolf1 = new Wolf();
-        Wolf wolf2 = new Wolf();
-        
-        wolf1.run();
-        wolf1.yowl();
-        wolf1.hunt();
-        
-        System.out.println();
-        
-        wolf2.go();
-        wolf2.sit();
-    }
 }
