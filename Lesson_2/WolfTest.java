@@ -1,12 +1,6 @@
 public class WolfTest {
-	
-	String nickname;
-    float weight;
-    int age;
-    String color;
-	
     public static void main(String[] args) {
-        WolfTest wolf = new WolfTest();
+        Wolf wolf = new Wolf();
 		wolf.nickname = "Зверь";
 		wolf.weight = 10.5f;
 		wolf.age = 5;
