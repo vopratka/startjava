@@ -53,7 +53,7 @@ public class Jaeger {
     }
 
     public void setSpeed(int speed) {
-            this.speed = speed;
+        this.speed = speed;
     }
     
     public int getStrenght() {
@@ -61,7 +61,7 @@ public class Jaeger {
     }
 
     public void setStrenght(int strenght) {
-            this.strenght = strenght;
+        this.strenght = strenght;
     }
     
     public int getArmor() {
@@ -69,6 +69,6 @@ public class Jaeger {
     }
 
     public void setArmor(int armor) {
-            this.armor = armor;
+        this.armor = armor;
     }
 }
