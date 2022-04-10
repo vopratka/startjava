@@ -1,7 +1,6 @@
 public class VariablesTheme {
     public static void main(String[] args) {
         //Создание переменных и вывод их значений на консоль
-
         System.out.println("1. Создание переменных и вывод их значений на консоль \n");
 
         byte numberOfCPU = 1;       
@@ -28,8 +27,7 @@ public class VariablesTheme {
         boolean spaceHdMore = spaceHdMb > amountRamMb; // true
         System.out.println("Объём жёсткого диска больше объёма оперативной памяти: " + spaceHdMore);
 
-        //Расчет стоимости товара со скидкой
-        
+        //Расчет стоимости товара со скидкой        
         int priceX = 100;        
         int priceY = 200;
         int totalCost = priceX + priceY;
@@ -42,8 +40,7 @@ public class VariablesTheme {
         System.out.println("Стоимость товаров со скидкой: " + sumPrice + " руб.");
         System.out.println("Сумма скидки: " + sumSale + " руб.\n");
 
-        //Вывод на консоль слова JAVA
-        
+        //Вывод на консоль слова JAVA        
         System.out.println("3. Вывод на консоль слова JAVA:\n");
         
         System.out.println("   J    a  v     v  a");
@@ -52,7 +49,6 @@ public class VariablesTheme {
         System.out.println(" JJ  a     a  V  a     a\n");
         
         //Отображение min и max значений числовых типов данных
-
         System.out.println("4. Отображение min и max значений числовых типов данных:\n");
         
         byte variableByte = 127;
@@ -84,7 +80,6 @@ public class VariablesTheme {
         System.out.println(variableLong--);
         
         //Перестановка значений переменных
-
         System.out.println("\n5. Перестановка значений переменных:\n");
         
         float a = 6;        
@@ -100,7 +95,6 @@ public class VariablesTheme {
         System.out.println("b = " + (b - c));
 
         //Вывод символов и их кодов
-
         System.out.println("\n6. Вывод символов и их кодов:\n");
 
         byte lattice = 35;
@@ -119,7 +113,6 @@ public class VariablesTheme {
         System.out.println(underline + " - " + (char) underline);
 
         //Произведение и сумма цифр числа
-
         System.out.println("\n7. Произведение и сумма цифр числа 345:\n");
 
         System.out.println("Произвдение цифр числа 345 = " + ((345 / 100) * ((345 / 10) % 10) * (345 % 10)));
@@ -127,7 +120,6 @@ public class VariablesTheme {
         System.out.println("\nСумма цифр числа 345 = " + ((345 / 100) + ((345 / 10) % 10) + (345 % 10)));
 
         //Вывод на консоль ASCII-арт Дюка
-
         char space, slash, backslash, underscore, openBracket, closingBracket;
 
         space = 32;
@@ -144,8 +136,7 @@ public class VariablesTheme {
         System.out.println("" + space + slash + space + space + space + space + space + space + backslash);
         System.out.println("" + slash + underscore + underscore + underscore + underscore + slash + backslash + underscore + underscore + backslash);
 
-        //Отображение сотен, десятков, единиц числа
-        
+        //Отображение сотен, десятков, единиц числа        
         System.out.println("\n9. Отображение сотен, десятков, единиц числа 123:\n");
 
         byte numer = 123;
@@ -154,7 +145,6 @@ public class VariablesTheme {
         System.out.println("Единицы: " + (123 % 10));        
 
         //Преобразование секунд
-
         System.out.println("\n10. Преобразование секунд:\n");
 
         int sec = 86399;
