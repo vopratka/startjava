@@ -1,7 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class GuessNumber{
+public class GuessNumber {
     Scanner console = new Scanner(System.in);
     
     private Player player1;
@@ -20,9 +20,9 @@ public class GuessNumber{
             System.out.println(player1.getName() + ", введи число:");
             player1.setNumber(console.nextInt());
             if (player1.getNumber() > secretNumber) {
-              System.out.println("Данное число больше того, что загадал компьютер");
+                System.out.println("Данное число больше того, что загадал компьютер");
             } else if (player1.getNumber() < secretNumber) {
-              System.out.println("Данное число меньше того, что загадал компьютер");
+                System.out.println("Данное число меньше того, что загадал компьютер");
             } else {
                 System.out.println("Выиграл игрок " + player1.getName());
                 break;
@@ -31,9 +31,9 @@ public class GuessNumber{
             
             player2.setNumber(console.nextInt());
             if (player2.getNumber() > secretNumber) {
-              System.out.println("Данное число больше того, что загадал компьютер");
+                System.out.println("Данное число больше того, что загадал компьютер");
             } else if (player2.getNumber() < secretNumber) {
-              System.out.println("Данное число меньше того, что загадал компьютер");
+                System.out.println("Данное число меньше того, что загадал компьютер");
             } else {
                 System.out.println("Выиграл игрок " + player2.getName());
                 break;
