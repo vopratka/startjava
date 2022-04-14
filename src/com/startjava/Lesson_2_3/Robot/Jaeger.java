@@ -1,3 +1,5 @@
+package com.startjava.Lesson_2_3.Robot;
+
 public class Jaeger {
 	private String modelName;
 	private String mark;
