@@ -1,4 +1,4 @@
-package com.startjava.Lesson_1.if_else_statement_theme;
+package com.startjava.lesson_1.if_else_statement_theme;
 
 public class IfElseStatementTheme {
     public static void main(String[] args) {
