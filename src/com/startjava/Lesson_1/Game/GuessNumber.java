@@ -1,4 +1,4 @@
-package com.startjava.Lesson_1.GuessNumber;
+package com.startjava.Lesson_1.game;
 
 public class GuessNumber{
     public static void main(String[] args) {
