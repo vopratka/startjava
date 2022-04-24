@@ -1,36 +1,26 @@
 package com.startjava.lesson_2_3_4.calculator;
 
 public class Calculator {
-    private int a;
-    private int b;
     private int result;
-    private char sign;
-
-    public int calc(String mathCombination) {
-        String[] elements = mathCombination.split(" ");
-        a = Integer.parseInt(elements[0]);
-        sign = elements[1].charAt(0);
-        b = Integer.parseInt(elements[2]);
+    public int calc(String mathExpression) {
+        String[] elements = mathExpression.split(" ");
+        int a = Integer.parseInt(elements[0]);
+        char sign = elements[1].charAt(0);
+        int b = Integer.parseInt(elements[2]);
 
         switch(sign) {
             case '+':
-                result = Math.addExact(a, b);
-                break;
+                return Math.addExact(a, b);
             case '-':
-                result = Math.subtractExact(a, b);
-                break;
+                return Math.subtractExact(a, b);
             case '%':
-                result = Math.floorMod(a, b);
-                break;
+                return Math.floorMod(a, b);
             case '*':
-                result = Math.multiplyExact(a, b);
-                break;
+                return Math.multiplyExact(a, b);
             case '/':
-                result = Math.floorDiv(a, b);
-                break;
+                return Math.floorDiv(a, b);
             case '^':
-                result = (int)Math.pow(a, b);
-                break;
+                return (int)Math.pow(a, b);
         }
         return result;
     }

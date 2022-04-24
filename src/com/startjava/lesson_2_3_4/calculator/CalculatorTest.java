@@ -11,14 +11,14 @@ public class CalculatorTest {
             Calculator calculator = new Calculator();
 
             System.out.println("Введите математическое выражение (через пробел): ");
-            String mathCombination = scanner.nextLine();
+            String mathExpression = scanner.nextLine();
 
-            System.out.print(mathCombination + " = " + calculator.calc(mathCombination));
+            System.out.print(mathExpression + " = " + calculator.calc(mathExpression));
 
             do {
                 System.out.println("\nХотите продолжить вычисления? [yes/no]:");
                 choice = scanner.next();
-            } while((!choice.equalsIgnoreCase("Yes")) && (!choice.equalsIgnoreCase("No")));
+            } while(!choice.equalsIgnoreCase("Yes") && !choice.equalsIgnoreCase("No"));
         } while (choice.equalsIgnoreCase("Yes"));
     }
 }
