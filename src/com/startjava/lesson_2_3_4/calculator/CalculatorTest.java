@@ -4,11 +4,12 @@ import java.util.Scanner;
 
 public class CalculatorTest {
     public static void main(String[] args) {
-        Scanner scanner  = new Scanner(System.in);
-        Calculator calculator = new Calculator();
         String choice;
 
         do {
+            Scanner scanner  = new Scanner(System.in);
+            Calculator calculator = new Calculator();
+
             System.out.println("Введите математическое выражение (через пробел): ");
             String mathCombination = scanner.nextLine();
 
