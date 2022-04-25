@@ -16,6 +16,7 @@ public class GuessNumberTest {
         
         String choice;
         do {
+            System.out.println("Начало игры. У каждого игрока по 10 попыток");
             game.launch();
             do {
                 System.out.println("Хотите продолжить игру? [yes/no]:");

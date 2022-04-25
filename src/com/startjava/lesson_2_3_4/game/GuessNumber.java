@@ -20,26 +20,33 @@ public class GuessNumber {
         
         while (true) {
             System.out.println(player1.getName() + ", введи число:");
-            player1.setNumber(console.nextInt());
-            if (player1.getNumber() > secretNumber) {
-                System.out.println("Данное число больше того, что загадал компьютер");
-            } else if (player1.getNumber() < secretNumber) {
-                System.out.println("Данное число меньше того, что загадал компьютер");
-            } else {
-                System.out.println("Выиграл игрок " + player1.getName());
-                break;
+
+            //Счётчик попыток
+            for(int i = 1; i <= 10; i++) {
+                player1.setAttemptNum(i);
+                player1.setNumber(console.nextInt());
+                if (player1.getNumber() > secretNumber) {
+                    System.out.println("Данное число больше того, что загадал компьютер");
+                } else if (player1.getNumber() < secretNumber) {
+                    System.out.println("Данное число меньше того, что загадал компьютер");
+                } else {
+                    System.out.println("Выиграл игрок " + player1.getName() + ", угадал число " + player1.getNumber() + " c " + player1.getAttemptNum() + " попытки.");
+                    break;
+                }
+                System.out.println(player2.getName() + ", введи число:");
+
+                player2.setAttemptNum(i);
+                player2.setNumber(console.nextInt());
+                if (player2.getNumber() > secretNumber) {
+                    System.out.println("Данное число больше того, что загадал компьютер");
+                } else if (player2.getNumber() < secretNumber) {
+                    System.out.println("Данное число меньше того, что загадал компьютер");
+                } else {
+                    System.out.println("Выиграл игрок " + player2.getName() + ", угадал число " + player2.getNumber() + " c " + player2.getAttemptNum() + " попытки.");
+                    break;
+                }
             }
-            System.out.println(player2.getName() + ", введи число:");
-            
-            player2.setNumber(console.nextInt());
-            if (player2.getNumber() > secretNumber) {
-                System.out.println("Данное число больше того, что загадал компьютер");
-            } else if (player2.getNumber() < secretNumber) {
-                System.out.println("Данное число меньше того, что загадал компьютер");
-            } else {
-                System.out.println("Выиграл игрок " + player2.getName());
-                break;
-            }
+
         }
     }
 }
