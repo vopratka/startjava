@@ -2,6 +2,7 @@ package com.startjava.lesson_2_3_4.game;
 
 import java.util.Random;
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class GuessNumber {
     Scanner console = new Scanner(System.in);
@@ -17,10 +18,10 @@ public class GuessNumber {
     public void launch() {
         Random random = new Random();
         int secretNumber = random.nextInt(100) + 1;
-        outer://Якорь выхода из цикла
+        
         while (true) {
-            
-            for(int i = 1; i <= 10; i++) {//Счётчик попыток
+            // outer://Якорь выхода из цикла
+            for(int i = 0; i < 10; i++) {//Счётчик попыток
             
                 System.out.println(player1.getName() + ", введи число:");
                 
@@ -34,9 +35,9 @@ public class GuessNumber {
                     System.out.println("Данное число меньше того, что загадал компьютер");
                 } else {
                     System.out.println("Выиграл игрок " + player1.getName() + ", угадал число " + player1.getNumber() + " c " + player1.getAttemptNum() + " попытки.");
-                    break outer;
+                    break;
                 }
-                if (player1.getAttemptNum() == 10) {//Проверка оставшегося количества попыток
+                if (player1.getAttemptNum() == 9) {//Проверка оставшегося количества попыток
                     System.out.println(player1.getName() + ", у Вас закончились попытки!");
                 }
                 
@@ -52,18 +53,23 @@ public class GuessNumber {
                     System.out.println("Данное число меньше того, что загадал компьютер");
                 } else {
                     System.out.println("Выиграл игрок " + player2.getName() + ", угадал число " + player2.getNumber() + " c " + player2.getAttemptNum() + " попытки.");
-                    break outer;
+                    break;
                 }
-                if (player2.getAttemptNum() == 10) {//Проверка оставшегося количества попыток
-                    System.out.println(player2.getName() + ", у Вас закончились попытки!");
-                }
-                
-                if (player1.getAttemptNum() == 10 && player2.getAttemptNum() == 10) {
+                if (player2.getAttemptNum() == 9) {//Проверка оставшегося количества попыток
                     System.out.println("Никто не угадал, Игра закончена!");
-                    break outer;
+                    break;
                 }
             }
+            int[] copy1 = Arrays.copyOf(player1.getPlayerNumbers(), player1.getAttemptNum() + 1);
+            int[] copy2 = Arrays.copyOf(player2.getPlayerNumbers(), player1.getAttemptNum() + 1);
+        
+            System.out.println("Игрок " + player1.getName() + " вводил следующие цифры: " + Arrays.toString(copy1));
+            System.out.println("Игрок " + player1.getName() + " вводил следующие цифры: " + Arrays.toString(copy2));
 
-        }
+            Arrays.fill(player1.getPlayerNumbers(), 0);
+            Arrays.fill(player2.getPlayerNumbers(), 0);
+            break;
+
+          }
     }
 }
