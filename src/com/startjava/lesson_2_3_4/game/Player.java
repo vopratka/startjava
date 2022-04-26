@@ -1,31 +1,40 @@
 package com.startjava.lesson_2_3_4.game;
 
 public class Player {
-    private String name;
-    private int attemptNum; //Номер попытки
-    private int[] number = new int[10]; //Массив вводимых игроками чисел
+	private String name;
+	private int number;
+	private int[] enteredNums = new int[10];
+	private int attempt;
 
-    public Player(String name) {
-        this.name = name;
-    }
+	public Player(String name) {
+		this.name = name;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public int getAttemptNum() {
-        return attemptNum;
-    }
+	public void setNumber(int number) {
+		this.number = number;
+	}
 
-    public void setAttemptNum(int attemptNum) {
-        this.attemptNum = attemptNum;
-    }
+	public int getNumber() {
+		return number;
+	}
 
-    public void setNumber(int number) {
-        this.number = number[attemptNum];
-    }
+	public void setEnteredNums(int num) { //Это решение нагуглил. Почему так работает пока не разобрался. Прошу объяснить, или подсказать где найти описание работы этого способа.
+		enteredNums[attempt] = num;
+	}
 
-    public int getNumber() {
-        return number[attemptNum];
-    }
+	public int[] getEnteredNums() {
+		return enteredNums;
+	}
+
+	public void setAttempt(int attempt) {
+		this.attempt = attempt;
+	}
+
+	public int getAttempt() {
+		return attempt;
+	}
 }
