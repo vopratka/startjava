@@ -1,10 +1,12 @@
 package com.startjava.lesson_2_3_4.game;
 
+import java.util.Arrays;
+
 public class Player {
     private String name;
     private int attemptNum; //Номер попытки
     private int number; //Введённое число игроком
-    private int[] playerNumbers = new int[10]; //Массив вводимых игроками чисел
+    private int[] numbers = new int[10]; //Массив вводимых игроками чисел
 
     public Player(String name) {
         this.name = name;
@@ -30,11 +32,11 @@ public class Player {
         this.number = number;
     }
 
-    public void setPlayerNumbers(int x) {//Это решение нагуглил. Почему так работает пока не разобрался. Прошу объяснить, или подсказать где найти описание работы этого способа.
-        playerNumbers[attemptNum] = x;
+    public void setNumbers(int x) {
+        numbers[attemptNum] = x;
     }
 
-    public int[] getPlayerNumbers() {
-        return playerNumbers;
+    public int[] getNumbers() {
+        return Arrays.copyOf(numbers, attemptNum + 1);
     }
 }
