@@ -24,15 +24,15 @@ public class GuessNumber {
                 System.out.println(player1.getName() + ", введи число:");
                 
                 player1.setAttemptNum(i);
-                player1.setNumber(console.nextInt());
-                player1.setNumbers(player1.getNumber());//Передача в массив
+                // player1.setNumber(console.nextInt());
+                player1.setNumbers(console.nextInt());//Передача в массив
                 
-                if (player1.getNumber() > secretNumber) {
+                if (player1.getNumbesInt() > secretNumber) {
                     System.out.println("Данное число больше того, что загадал компьютер");
-                } else if (player1.getNumber() < secretNumber) {
+                } else if (player1.getNumbesInt() < secretNumber) {
                     System.out.println("Данное число меньше того, что загадал компьютер");
                 } else {
-                    System.out.println("Выиграл игрок " + player1.getName() + ", угадал число " + player1.getNumber() + " c " + (player1.getAttemptNum() + 1) + " попытки.");
+                    System.out.println("Выиграл игрок " + player1.getName() + ", угадал число " + player1.getNumbesInt() + " c " + (player1.getAttemptNum() + 1) + " попытки.");
                     break;
                 }
                 if (player1.getAttemptNum() == 9) {//Проверка оставшегося количества попыток
@@ -42,15 +42,15 @@ public class GuessNumber {
                 System.out.println(player2.getName() + ", введи число:");
 
                 player2.setAttemptNum(i);
-                player2.setNumber(console.nextInt());
-                player2.setNumbers(player2.getNumber());//Передача в массив
+                // player2.setNumber(console.nextInt());
+                player2.setNumbers(console.nextInt());//Передача в массив
                 
-                if (player2.getNumber() > secretNumber) {
+                if (player2.getNumbesInt() > secretNumber) {
                     System.out.println("Данное число больше того, что загадал компьютер");
-                } else if (player2.getNumber() < secretNumber) {
+                } else if (player2.getNumbesInt() < secretNumber) {
                     System.out.println("Данное число меньше того, что загадал компьютер");
                 } else {
-                    System.out.println("Выиграл игрок " + player2.getName() + ", угадал число " + player2.getNumber() + " c " + (player2.getAttemptNum() + 1) + " попытки.");
+                    System.out.println("Выиграл игрок " + player2.getName() + ", угадал число " + player2.getNumbesInt() + " c " + (player2.getAttemptNum() + 1) + " попытки.");
                     break;
                 }
                 if (player2.getAttemptNum() == 9) {//Проверка оставшегося количества попыток
@@ -67,7 +67,6 @@ public class GuessNumber {
             Arrays.fill(player1.getNumbers(), 0);
             Arrays.fill(player2.getNumbers(), 0);
             break;
-
           }
     }
 }
