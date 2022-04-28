@@ -43,5 +43,4 @@ public class Player {
     public int getNumbesInt() {
         return numbers [attemptNum];
     }
-    
 }
