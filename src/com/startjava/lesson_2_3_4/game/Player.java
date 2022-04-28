@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Player {
     private String name;
     private int attemptNum; //Номер попытки
-    private int number; //Введённое число игроком
+    // private int number; //Введённое число игроком
     private int[] numbers = new int[10]; //Массив вводимых игроками чисел
 
     public Player(String name) {
@@ -24,19 +24,24 @@ public class Player {
         this.attemptNum = attemptNum;
     }
     
-        public int getNumber() {
-        return number;
-    }
+    //     public int getNumber() {
+    //     return number;
+    // }
 
-    public void setNumber(int number) {
-        this.number = number;
-    }
+    // public void setNumber(int number) {
+    //     this.number = number;
+    // }
 
-    public void setNumbers(int x) {
-        numbers[attemptNum] = x;
+    public void setNumbers(int number) {
+        numbers[attemptNum] = number;
     }
 
     public int[] getNumbers() {
         return Arrays.copyOf(numbers, attemptNum + 1);
     }
+    
+    public int getNumbesInt() {
+        return numbers [attemptNum];
+    }
+    
 }
