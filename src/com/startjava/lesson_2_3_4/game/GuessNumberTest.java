@@ -19,7 +19,7 @@ public class GuessNumberTest {
             System.out.println("Начало игры. У каждого игрока по 10 попыток");
             game.launch();
             do {
-                System.out.println("Хотите продолжить игру? [yes/no]:");
+                System.out.println("\nХотите продолжить игру? [yes/no]:");
                 choice = scan.next();
             } while((!choice.equalsIgnoreCase("Yes")) && (!choice.equalsIgnoreCase("No")));
         } while (choice.equalsIgnoreCase("Yes"));        
