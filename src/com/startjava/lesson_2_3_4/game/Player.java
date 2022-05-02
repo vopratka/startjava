@@ -27,7 +27,7 @@ public class Player {
         numbers[attemptNum] = number;
     }
 
-    public int[] getNumber() {
+    public int[] getNumbers() {
         return Arrays.copyOf(numbers, attemptNum + 1);
     }
 
@@ -35,7 +35,7 @@ public class Player {
         return numbers [attemptNum];
     }
 
-    public void getZero() {
-        Arrays.fill(numbers, 0);
+    public void resetArray() {
+        Arrays.fill(numbers, 0, attemptNum + 1, 0);
     }
 }
