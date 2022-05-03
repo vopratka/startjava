@@ -1,7 +1,5 @@
 package com.startjava.lesson_2_3_4.game;
 
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.Random;
 import java.util.Scanner;
 
@@ -12,8 +10,6 @@ public class GuessNumber {
     private Player player2;
 
     private int secretNumber;
-
-    int i;
 
     public GuessNumber(Player player1, Player player2) {
         this.player1 = player1;
@@ -26,9 +22,9 @@ public class GuessNumber {
 
         while (true) {
             //Счётчик попыток
-            for(i = 0; i < 10; i++) {
+            for(int i = 0; i < 10; i++) {
                 // Ввод числа первым игроком и передача в массив:
-                inputNumber(player1);
+                inputNumber(i, player1);
                 //Проверка результата первого игрока
                 compareNumbers(player1);
                 if (player1.getLastNum() == secretNumber) {
@@ -37,7 +33,7 @@ public class GuessNumber {
                 //Проверка оставшегося количества попыток первого игрока
                 checkAttempt(player1);
                 // Ввод числа вторым игроком и передача в массив:
-                inputNumber(player2);
+                inputNumber(i, player2);
                 //Проверка результата второго игрока
                 compareNumbers(player2);
                 if (player2.getLastNum() == secretNumber) {
@@ -58,7 +54,7 @@ public class GuessNumber {
         }
     }
 
-    private void inputNumber(Player player) {
+    private void inputNumber(int i, Player player) {
         System.out.println(player.getName() + ", введи число:");
         player.setAttemptNum(i);
         //Ввод числа с клавиатуры

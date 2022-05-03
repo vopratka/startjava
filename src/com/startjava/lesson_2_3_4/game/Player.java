@@ -36,6 +36,6 @@ public class Player {
     }
 
     public void resetArray() {
-        Arrays.fill(numbers, 0, attemptNum + 1, 0);
+        Arrays.fill(numbers, 0, attemptNum, 0);
     }
 }
