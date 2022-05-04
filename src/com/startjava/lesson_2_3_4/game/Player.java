@@ -32,7 +32,7 @@ public class Player {
     }
 
     public int getLastNum() {
-        return numbers [attemptNum];
+        return numbers[attemptNum];
     }
 
     public void resetArray() {

@@ -43,9 +43,9 @@ public class GuessNumber {
                 checkAttempt(player2);
             }
             //Вывод чисел, которые использовал игрок 1
-            playedNumbers(player1);
+            displayNumbers(player1);
             //Вывод чисел, которые использовал игрок 2
-            playedNumbers(player2);
+            displayNumbers(player2);
             System.out.println();
 
             player1.resetArray();
@@ -77,14 +77,14 @@ public class GuessNumber {
     }
 
     //Проверка оставшегося количества попыток
-    public void checkAttempt(Player player) {
+    private void checkAttempt(Player player) {
         if (player.getAttemptNum() == 9) {
             System.out.println(player.getName() + ", у Вас закончились попытки!");
         }
     }
 
     //Вывод чисел, которые использовали игроки
-    private void playedNumbers(Player player) {
+    private void displayNumbers(Player player) {
         System.out.print("\nИгрок " + player.getName() + " вводил следующие цифры: ");
         for (int number : player.getNumbers()) {
             System.out.print(" " + number);

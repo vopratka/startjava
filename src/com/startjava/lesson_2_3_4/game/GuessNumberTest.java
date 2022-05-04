@@ -21,7 +21,7 @@ public class GuessNumberTest {
             do {
                 System.out.println("\nХотите продолжить игру? [yes/no]:");
                 choice = scan.next();
-            } while((!choice.equalsIgnoreCase("Yes")) && (!choice.equalsIgnoreCase("No")));
+            } while(!choice.equalsIgnoreCase("Yes") && !choice.equalsIgnoreCase("No"));
         } while (choice.equalsIgnoreCase("Yes"));        
     }
 }
